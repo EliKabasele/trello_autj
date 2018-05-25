@@ -55,8 +55,21 @@ export namespace Trello {
   }
 
   export interface Boards {
-    totalPerMember: TotalPerMember;
+    id: string;
+    name: string;
+    totalPerMember?: TotalPerMember;
   }
+
+  export interface Cards {
+    id: string;
+    name: string;
+    badges: object;
+    dueComplete: boolean;
+    due?: string;
+    desc: string;
+    idMembers: object;
+  }
+
 
   export interface TotalPerMember2 {
     status: string;
@@ -85,5 +98,19 @@ export namespace Trello {
     colorBlind: boolean;
     locale: string;
   }
+
+  export interface InAndOutbox {
+    0: object;
+    1: comment[];
+  }
+
+  export interface comment {
+    data: object;
+    date: Date;
+    id: string;
+    idMemberCreator: string;
+    type: string;
+  }
+
 
 }

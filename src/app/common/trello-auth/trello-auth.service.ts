@@ -14,7 +14,7 @@ export class TrelloAuthService {
   /**
    * The apiKey is the identity of our application when we talk to the Trello API.
    * */
-  public apiKey: string = 'your key ';
+  public apiKey: string = '09637f57a22e9f7af1062f0caf2c2761';
 
   constructor(private router: Router) {
     this.token = localStorage.getItem(TRELLO_TOKEN_KEY);
